@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dicoding.fundamentalandroid">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Thread.BgThreadMainActivity"></activity>
+        <activity android:name=".ViewPager.ViewPagerMainActivity" />
+        <activity android:name=".Navigation.MenuActivity" />
+        <activity android:name=".Navigation.NavigationMainActivity" />
+        <activity android:name=".CustomView.CustomViewMainActivity" />
+        <activity android:name=".UnitTesting.UnitTestingMainActivity" />
+        <activity android:name=".Debugging.DebuggingMainActivity" />
+        <activity android:name=".ListView.ListViewMainActivity" />
+        <activity android:name=".Fragment.ProfileActivity" />
+        <activity android:name=".Fragment.FragmentMainActivity" />
+        <activity android:name=".Intent.IntentMainActivity" />
+        <activity android:name=".Intent.MoveActivity" />
+        <activity android:name=".Intent.MoveForResultActivity" />
+        <activity android:name=".Intent.MoveActivityWithObject" />
+        <activity android:name=".Intent.DialNumberActivity" />
+        <activity android:name=".Intent.MoveActivityWithData" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
