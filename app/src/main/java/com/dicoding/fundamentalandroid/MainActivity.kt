@@ -18,6 +18,7 @@ import com.dicoding.fundamentalandroid.Intent.IntentMainActivity
 import com.dicoding.fundamentalandroid.ListView.ListViewMainActivity
 import com.dicoding.fundamentalandroid.Navigation.MenuActivity
 import com.dicoding.fundamentalandroid.Navigation.MenuFragment
+import com.dicoding.fundamentalandroid.Service.ServiceMainActivity
 import com.dicoding.fundamentalandroid.Thread.BgThreadMainActivity
 import com.dicoding.fundamentalandroid.UnitTesting.UnitTestingMainActivity
 import com.dicoding.fundamentalandroid.ViewPager.ViewPagerMainActivity
@@ -56,6 +57,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnBgThread: Button = findViewById(R.id.btn_bgthread_exercise)
         btnBgThread.setOnClickListener(this)
+
+        val btnService: Button = findViewById(R.id.btn_service_exercise)
+        btnService.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -91,6 +95,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_bgthread_exercise -> {
                 val moveBgThreadExercise = Intent(this@MainActivity, BgThreadMainActivity::class.java)
                 startActivity(moveBgThreadExercise)
+            }
+            R.id.btn_service_exercise -> {
+                val moveServiceExercise = Intent(this@MainActivity, ServiceMainActivity::class.java)
+                startActivity(moveServiceExercise)
             }
         }
     }

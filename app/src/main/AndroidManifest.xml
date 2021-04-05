@@ -9,10 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Thread.BgThreadMainActivity"></activity>
+        <service
+            android:name=".Service.MyBoundService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".Service.MyIntentService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Service.ServiceMainActivity" />
+        <activity android:name=".Thread.BgThreadMainActivity" />
         <activity android:name=".ViewPager.ViewPagerMainActivity" />
         <activity android:name=".Navigation.MenuActivity" />
-        <activity android:name=".Navigation.NavigationMainActivity" />
         <activity android:name=".CustomView.CustomViewMainActivity" />
         <activity android:name=".UnitTesting.UnitTestingMainActivity" />
         <activity android:name=".Debugging.DebuggingMainActivity" />
