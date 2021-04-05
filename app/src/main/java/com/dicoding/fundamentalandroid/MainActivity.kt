@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import com.dicoding.fundamentalandroid.BroadcastReceiver.BroadcastReceiverActivity
 import com.dicoding.fundamentalandroid.CustomView.CustomViewMainActivity
 import com.dicoding.fundamentalandroid.Debugging.DebuggingMainActivity
 import com.dicoding.fundamentalandroid.Fragment.FragmentMainActivity
@@ -60,6 +61,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnService: Button = findViewById(R.id.btn_service_exercise)
         btnService.setOnClickListener(this)
+
+        val btnBcReceiver: Button = findViewById(R.id.btn_broadcastreceiver_exercise)
+        btnBcReceiver.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -99,6 +103,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_service_exercise -> {
                 val moveServiceExercise = Intent(this@MainActivity, ServiceMainActivity::class.java)
                 startActivity(moveServiceExercise)
+            }
+            R.id.btn_broadcastreceiver_exercise -> {
+                val moveBcReceiverExercise = Intent(this@MainActivity, BroadcastReceiverActivity::class.java)
+                startActivity(moveBcReceiverExercise)
             }
         }
     }

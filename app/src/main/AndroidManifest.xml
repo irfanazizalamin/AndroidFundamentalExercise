@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dicoding.fundamentalandroid">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity" />
+
+        <activity
+            android:name=".BroadcastReceiver.SmsReceiverActivity"
+            android:theme="@style/Theme.Broadcast.SmsReceiver" />
+
+        <receiver
+            android:name=".BroadcastReceiver.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.provider" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name=".Service.MyBoundService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
         <service
             android:name=".Service.MyIntentService"
             android:exported="false"
