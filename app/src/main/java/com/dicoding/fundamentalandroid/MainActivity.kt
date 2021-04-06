@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import com.dicoding.fundamentalandroid.AlarmManager.AlarmManagerMainActivity
 import com.dicoding.fundamentalandroid.BroadcastReceiver.BroadcastReceiverActivity
 import com.dicoding.fundamentalandroid.CustomView.CustomViewMainActivity
 import com.dicoding.fundamentalandroid.Debugging.DebuggingMainActivity
@@ -64,51 +65,50 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnBcReceiver: Button = findViewById(R.id.btn_broadcastreceiver_exercise)
         btnBcReceiver.setOnClickListener(this)
+
+        val btnAlarmManager: Button = findViewById(R.id.btn_alarmmanager_exercise)
+        btnAlarmManager.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
+        var intent: Intent? = null
+
         when(v?.id) {
             R.id.btn_intent_exercise -> {
-                val moveIntentExercise = Intent(this@MainActivity, IntentMainActivity::class.java)
-                startActivity(moveIntentExercise)
+                intent = Intent(this@MainActivity, IntentMainActivity::class.java)
             }
             R.id.btn_fragment_exercise -> {
-                val moveFragmentExercise = Intent(this@MainActivity, FragmentMainActivity::class.java)
-                startActivity(moveFragmentExercise)
+                intent = Intent(this@MainActivity, FragmentMainActivity::class.java)
             }
             R.id.btn_listview_exercise -> {
-                val moveListViewExercise = Intent(this@MainActivity, ListViewMainActivity::class.java)
-                startActivity(moveListViewExercise)
+                intent = Intent(this@MainActivity, ListViewMainActivity::class.java)
             }
             R.id.btn_debugging_exercise -> {
-                val moveDebuggingExercise = Intent(this@MainActivity, DebuggingMainActivity::class.java)
-                startActivity(moveDebuggingExercise)
+                intent = Intent(this@MainActivity, DebuggingMainActivity::class.java)
             }
             R.id.btn_unittesting_exercise -> {
-                val moveUnitTestExercise = Intent(this@MainActivity, UnitTestingMainActivity::class.java)
-                startActivity(moveUnitTestExercise)
+                intent = Intent(this@MainActivity, UnitTestingMainActivity::class.java)
             }
             R.id.btn_customview_exercise -> {
-                val moveCustomViewExercise = Intent(this@MainActivity, CustomViewMainActivity::class.java)
-                startActivity(moveCustomViewExercise)
+                intent = Intent(this@MainActivity, CustomViewMainActivity::class.java)
             }
             R.id.btn_viewpager_exercise -> {
-                val moveViewPagerExercise = Intent(this@MainActivity, ViewPagerMainActivity::class.java)
-                startActivity(moveViewPagerExercise)
+                intent = Intent(this@MainActivity, ViewPagerMainActivity::class.java)
             }
             R.id.btn_bgthread_exercise -> {
-                val moveBgThreadExercise = Intent(this@MainActivity, BgThreadMainActivity::class.java)
-                startActivity(moveBgThreadExercise)
+                intent = Intent(this@MainActivity, BgThreadMainActivity::class.java)
             }
             R.id.btn_service_exercise -> {
-                val moveServiceExercise = Intent(this@MainActivity, ServiceMainActivity::class.java)
-                startActivity(moveServiceExercise)
+                intent = Intent(this@MainActivity, ServiceMainActivity::class.java)
             }
             R.id.btn_broadcastreceiver_exercise -> {
-                val moveBcReceiverExercise = Intent(this@MainActivity, BroadcastReceiverActivity::class.java)
-                startActivity(moveBcReceiverExercise)
+                intent = Intent(this@MainActivity, BroadcastReceiverActivity::class.java)
+            }
+            R.id.btn_alarmmanager_exercise -> {
+                intent = Intent(this@MainActivity, AlarmManagerMainActivity::class.java)
             }
         }
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

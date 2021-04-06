@@ -88,6 +88,13 @@
             android:layout_marginBottom="16dp"
             android:text="Broadcast Receiver Exercise" />
 
+        <Button
+            android:id="@+id/btn_alarmmanager_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Alarm Manager Exercise" />
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
