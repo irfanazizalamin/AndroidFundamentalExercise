@@ -11,6 +11,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.SearchView
 import android.widget.Toast
+import com.dicoding.fundamentalandroid.API.ApiMainActivity
 import com.dicoding.fundamentalandroid.AlarmManager.AlarmManagerMainActivity
 import com.dicoding.fundamentalandroid.BroadcastReceiver.BroadcastReceiverActivity
 import com.dicoding.fundamentalandroid.CustomView.CustomViewMainActivity
@@ -68,6 +69,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnAlarmManager: Button = findViewById(R.id.btn_alarmmanager_exercise)
         btnAlarmManager.setOnClickListener(this)
+
+        val btnApi: Button = findViewById(R.id.btn_api_exercise)
+        btnApi.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -106,6 +110,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_alarmmanager_exercise -> {
                 intent = Intent(this@MainActivity, AlarmManagerMainActivity::class.java)
+            }
+            R.id.btn_api_exercise -> {
+                intent = Intent(this@MainActivity, ApiMainActivity::class.java)
             }
         }
         startActivity(intent)
