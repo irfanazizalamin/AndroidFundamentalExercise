@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".API.ListQuotesActivity"></activity>
+        <activity android:name=".JobScheduler.JobSchedulerMainActivity"></activity>
+        <activity android:name=".API.ListQuotesActivity" />
         <activity android:name=".API.ApiMainActivity" />
 
         <receiver

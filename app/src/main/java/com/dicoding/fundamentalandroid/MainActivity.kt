@@ -18,6 +18,7 @@ import com.dicoding.fundamentalandroid.CustomView.CustomViewMainActivity
 import com.dicoding.fundamentalandroid.Debugging.DebuggingMainActivity
 import com.dicoding.fundamentalandroid.Fragment.FragmentMainActivity
 import com.dicoding.fundamentalandroid.Intent.IntentMainActivity
+import com.dicoding.fundamentalandroid.JobScheduler.JobSchedulerMainActivity
 import com.dicoding.fundamentalandroid.ListView.ListViewMainActivity
 import com.dicoding.fundamentalandroid.Navigation.MenuActivity
 import com.dicoding.fundamentalandroid.Navigation.MenuFragment
@@ -72,6 +73,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnApi: Button = findViewById(R.id.btn_api_exercise)
         btnApi.setOnClickListener(this)
+
+        val btnJobScheduler: Button = findViewById(R.id.btn_jobscheduler_exercise)
+        btnJobScheduler.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -113,6 +117,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.btn_api_exercise -> {
                 intent = Intent(this@MainActivity, ApiMainActivity::class.java)
+            }
+            R.id.btn_jobscheduler_exercise -> {
+                intent = Intent(this@MainActivity, JobSchedulerMainActivity::class.java)
             }
         }
         startActivity(intent)
